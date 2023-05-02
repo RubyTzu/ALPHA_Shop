@@ -1,78 +1,14 @@
-//import
-import { ReactComponent as MinusIcon } from "icons/minus.svg";
-import { ReactComponent as PlusIcon } from "icons/plus.svg";
+//import cart components
+import ProductList from "./CartComponents/ProductList"
+import ShippingPrice from "./CartComponents/ShippingPrice";
+import TotalPrice from "./CartComponents/TotalPrice";
 
-//Item data
-const products = [
-  {
-    id: "1",
-    name: "貓咪罐罐",
-    img: "https://picsum.photos/300/300?text=1",
-    price: 100,
-    quantity: 2,
-  },
-  {
-    id: "2",
-    name: "貓咪干干",
-    img: "https://picsum.photos/300/300?text=2",
-    price: 200,
-    quantity: 1,
-  },
-];
-
-//components: (ProductList),(ShippingPrice),(TotalPrice)
-function ProductList({ productsData }) {
-  return (
-    <section className="product-list col col-12" data-total-price="0">
-      {productsData.map((product) => (
-        <div
-          className="product-container col col-12"
-          data-count={product.quantity}
-          data-price={product.price}
-        >
-          <img className="img-container" src={product.img} alt={product.name} />
-          <div className="product-info">
-            <div className="product-name">{product.name}</div>
-            <div className="product-control-container">
-              <div className="product-control">
-                <MinusIcon className="product-action minus" />
-                <span className="product-count">{product.quantity}</span>
-                <PlusIcon className="product-action plus" />
-              </div>
-            </div>
-            <div className="price">{product.price}</div>
-          </div>
-        </div>
-      ))}
-    </section>
-  );
-}
-function ShippingPrice() {
-  return (
-    <section className="cart-info shipping col col-12">
-      <div className="text">運費</div>
-      <div className="price">0</div>
-    </section>
-  );
-}
-function TotalPrice({ productsData }) {
-  let totalPrice = 0;
-
-  productsData.forEach(
-    (product) => (totalPrice += product.price * product.quantity)
-  );
-
-  return (
-    <section className="cart-info total col col-12">
-      <div className="text">小計</div>
-      <div className="price">{totalPrice}</div>
-    </section>
-  );
-}
+//import products data
+import { products } from "./CartComponents/ProductsData"
 
 //export
 export default function Cart() {
-  let productsData = products.slice();
+  let productsData = products
 
   return (
     <section className="cart-container col col-lg-5 col-sm-12">
