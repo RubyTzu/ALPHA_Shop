@@ -1,4 +1,4 @@
-//import
+//import Html components
 import StepProgress from './StepProgress'
 import Step1 from './Step1'
 import Step2 from './Step2'

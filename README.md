@@ -1,12 +1,12 @@
 # ALPHA Shop
 
-ALPHA CAMP Season 3 Frontend Assignment 1
+ALPHA CAMP Season 3 Frontend Assignment
 
 ---
 
 ## Project Preview
 
-![image](./public/images/RegisterStep1.png)
+![image](./public/images/ALPHA_Shop_II.png)
 
 ---
 
@@ -19,8 +19,11 @@ This project was initialized using create-react-app
 ## Project setup
 
 1. install node.js
-2. clone the project
-3. open the project and type:
+2. clone this project
+3. open the project on code editor
+4. open the terminal and make sure using node v14.18.1 by typing:
+   `nvm use 14.18.1`
+5. install npm by typing:
    `npm install`
 
 ---
@@ -41,8 +44,8 @@ Open [http://localhost:3000](http://localhost:3000)
     /src         - root directory of source code
 
     /src/components   - React components
-    /src/icons   - SVG files
-    /src/style   - CSS style
 
+    /src/icons   - SVG files
+    /src/style   - sass style
     /public      - root directory of static files
     /public/images - pictures
