@@ -11,7 +11,9 @@ export default function AddressInput() {
           <div className="select-container">
             <select required>
               {cities.map((city) => (
-                <option value={city.value}>{city.text}</option>
+                <option value={city.value} key={city.value}>
+                  {city.text}
+                </option>
               ))}
             </select>
           </div>

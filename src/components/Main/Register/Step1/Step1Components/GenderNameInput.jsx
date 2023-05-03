@@ -13,7 +13,9 @@ export default function GenderNameInput() {
           <div className="select-container">
             <select>
               {genderTypes.map((type) => (
-                <option value={type.value}>{type.text}</option>
+                <option value={type.value} key={type.value}>
+                  {type.text}
+                </option>
               ))}
             </select>
           </div>
