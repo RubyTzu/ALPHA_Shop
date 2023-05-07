@@ -1,3 +1,5 @@
+
+//export
 export default function TotalPrice({ productsData }) {
   let totalPrice = 0;
 

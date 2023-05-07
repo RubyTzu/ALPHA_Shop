@@ -54,6 +54,10 @@ section.product-list {
                 justify-content: space-between;
                 align-items: center;
 
+                .product-button {
+                    all: unset;
+                }
+
                 .product-action {
                     display: inline-block;
                     width: 27px;

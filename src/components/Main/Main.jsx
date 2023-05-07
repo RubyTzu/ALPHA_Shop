@@ -3,11 +3,10 @@ import Register from "./Register/Register";
 import ProgressControl from "./ProgressControl/ProgressControl";
 import Cart from "./Cart/Cart";
 
-//stepPage={stepPage} onPrevPage={handlePrevPage} onNextPage={handleNextPage}
-
+//stepPage={stepPage} onPage={handleChangePage}
 
 //export
-export default function Main({ stepPage, onPrevPage, onNextPage }) {
+export default function Main({ stepPage, onPage }) {
   return (
     <main class="site-main">
       <div class="main-container">
@@ -16,7 +15,7 @@ export default function Main({ stepPage, onPrevPage, onNextPage }) {
         {/* <!-- cart --> */}
         <Cart />
         {/* <!-- progress-control --> */}
-        <ProgressControl onPrevStep={onPrevPage} onNextStep={onNextPage} />
+        <ProgressControl onChangePage={onPage} />
       </div>
     </main>
   );

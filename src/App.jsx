@@ -1,3 +1,4 @@
+//import
 import "./App.css";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
@@ -10,17 +11,14 @@ let initialStepPage = 1;
 function App() {
   const [stepPage, setStepPage] = useState(initialStepPage);
 
-
-  function handlePrevPage() {
+  function handleChangePage(buttonValue) {
     let currentStepPage = stepPage;
-    currentStepPage = currentStepPage - 1;
 
-    setStepPage(currentStepPage);
-  }
-
-  function handleNextPage() {
-    let currentStepPage = stepPage;
-    currentStepPage = currentStepPage + 1;
+    if (buttonValue === "next") {
+      currentStepPage = currentStepPage + 1;
+    } else if (buttonValue === "prev") {
+      currentStepPage = currentStepPage - 1;
+    }
 
     setStepPage(currentStepPage);
   }
@@ -28,14 +26,11 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Main
-        stepPage={stepPage}
-        onPrevPage={handlePrevPage}
-        onNextPage={handleNextPage}
-      />
+      <Main stepPage={stepPage} onPage={handleChangePage} />
       <Footer />
     </div>
   );
 }
 
+//export
 export default App;
