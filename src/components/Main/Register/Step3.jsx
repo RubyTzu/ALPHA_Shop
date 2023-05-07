@@ -4,7 +4,7 @@
 export default function Step3() {
     return (
         <form class="col col-12" data-phase="credit-card">
-              {/* <h3 class="form-title">付款資訊</h3>
+              <h3 class="form-title">付款資訊</h3>
               <section class="form-body col col-12">
                 <div class="col col-12">
                   <div class="input-group input-w-lg-4 input-w-sm-full">
@@ -28,7 +28,7 @@ export default function Step3() {
                     <input type="text" placeholder="123" />
                   </div>
                 </div>
-              </section> */}
+              </section>
             </form>
     )
 }

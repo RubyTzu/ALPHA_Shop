@@ -8,7 +8,7 @@ export default function TotalPrice({ productsData }) {
   return (
     <section className="cart-info total col col-12">
       <div className="text">小計</div>
-      <div className="price">{totalPrice}</div>
+      <div className="price">＄{totalPrice}</div>
     </section>
   );
 }
