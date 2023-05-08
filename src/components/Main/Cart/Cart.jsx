@@ -2,12 +2,13 @@
 import ProductList from "./CartComponents/ProductList"
 import ShippingPrice from "./CartComponents/ShippingPrice";
 import TotalPrice from "./CartComponents/TotalPrice";
-
+//import styles
+import styles from "./Cart.module.scss"
 //import products data
 import { products } from "./CartComponents/ProductsData"
-
 //import useState
 import { useState } from "react"
+
 
 //export
 export default function Cart() {
@@ -48,8 +49,8 @@ function handleMinusClick(productId) {
 }
 
   return (
-    <section className="cart-container col col-lg-5 col-sm-12">
-      <h3 className="cart-title">購物籃</h3>
+    <section className={`${styles.cartContainer} col col-lg-5 col-sm-12`}>
+      <h3 className={styles.cartTitle}>購物籃</h3>
 
       <ProductList
         productsData={productsData}

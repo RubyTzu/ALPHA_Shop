@@ -1,14 +1,15 @@
 //import
 import { cities } from "./Step1Data";
 import FormInput from "./FormInput";
+import styles from "../../../Register.module.scss"
 
 //export
 export default function AddressInput() {
   return (
-    <div className="col col-12">
-      <div className="input-group input-w-lg-2 input-w-sm-full">
+    <div className={`${styles.col} col col-12`}>
+      <div className={`${styles.inputGroup} input-w-lg-2 input-w-sm-full`}>
         <FormInput inputLabel={"縣市"}>
-          <div className="select-container">
+          <div className={styles.selectContainer}>
             <select required>
               {cities.map((city) => (
                 <option value={city.value} key={city.value}>
@@ -19,7 +20,7 @@ export default function AddressInput() {
           </div>
         </FormInput>
       </div>
-      <div className="input-group input-w-lg-4 input-w-sm-full">
+      <div className={`${styles.inputGroup} input-w-lg-4 input-w-sm-full`}>
         <FormInput inputLabel={"縣地址"}>
           <input type="text" placeholder="請輸入地址" />
         </FormInput>

@@ -1,6 +1,8 @@
-//import svg
+//import
 import { ReactComponent as MinusIcon } from "icons/minus.svg";
 import { ReactComponent as PlusIcon } from "icons/plus.svg";
+import styles from "../Cart.module.scss";
+
 
 export default function CartItem({
   id,
@@ -13,35 +15,35 @@ export default function CartItem({
 }) {
   return (
     <div
-      className="product-container col col-12"
+      className={`${styles.productContainer} col col-12`}
       data-count={quantity}
       data-price={price}
     >
-      <img className="img-container" src={img} alt={name} />
-      <div className="product-info">
-        <div className="product-name">{name}</div>
-        <div className="product-control-container">
-          <div className="product-control">
+      <img className={styles.imgContainer} src={img} alt={name} />
+      <div className={styles.productInfo}>
+        <div className={styles.productName}>{name}</div>
+        <div className={styles.productControlContainer}>
+          <div className={styles.productControl}>
             <button
-              className="product-button"
+              className={styles.productButton}
               onClick={() => {
                 onMinusClick(id);
               }}
             >
-              <MinusIcon className="product-action minus" />
+              <MinusIcon className={`${styles.productAction} minus`} />
             </button>
             <span className="product-count">{quantity}</span>
             <button
-              className="product-button"
+              className={styles.productButton}
               onClick={() => {
                 onPlusClick(id);
               }}
             >
-              <PlusIcon className="product-action plus" />
+              <PlusIcon className={`${styles.productAction} plus`} />
             </button>
           </div>
         </div>
-        <div className="price">{price}</div>
+        <div className={styles.price}>{price}</div>
       </div>
     </div>
   );

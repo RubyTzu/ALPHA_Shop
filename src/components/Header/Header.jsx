@@ -5,68 +5,72 @@ import { ReactComponent as SearchIcon } from "icons/search.svg"
 import { ReactComponent as CartIcon } from "icons/cart.svg"
 // import { ReactComponent as MoonIcon } from "icons/moon.svg"
 import { ReactComponent as SunIcon } from "icons/sun.svg"
-
+import styles from "./Header.module.scss"
 
 //export
 export default function Header() {
     return (
-      <header className="site-header">
-        <div className="header-container mx-auto">
+      <header className={styles.siteHeader}>
+        <div className={`${styles.headerContainer} mx-auto`}>
           {/* <!-- navbar-toggle --> */}
-          <input id="navbar-toggle" className="navbar-toggle" type="checkbox" />
-          <label for="navbar-toggle" className="burger-container">
-            <ToggleIcon className="icon-toggle cursor-point" />
+          <input
+            id={styles.navbarToggle}
+            className={styles.navbarToggle}
+            type="checkbox"
+          />
+          <label for="navbar-toggle" className={styles.burgerContainer}>
+            <ToggleIcon className={`${styles.iconToggle} ${styles.cursorPoint}`} />
           </label>
 
           {/* <!-- navbar-menu --> */}
-          <nav className="navbar-menu">
-            <ul className="nav-list site-menu-list mr-auto">
-              <li className="nav-item">
-                <a className="nav-link" href="/">
+          <nav className={styles.navbarMenu}>
+            <ul className={`${styles.navList} ${styles.siteMenuList} mr-auto`}>
+              <li className={styles.navItem}>
+                <a className={styles.navLink} href="/">
                   男款
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/">
+              <li className={styles.navItem}>
+                <a className={styles.navLink} href="/">
                   女款
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/">
+              <li className={styles.navItem}>
+                <a className={styles.navLink} href="/">
                   最新消息
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/">
+              <li className={styles.navItem}>
+                <a className={styles.navLink} href="/">
                   客製商品
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="/">
+              <li className={styles.navItem}>
+                <a className={styles.navLink} href="/">
                   聯絡我們
                 </a>
               </li>
             </ul>
-            <ul className="nav-list site-action-list">
+            <ul className={`${styles.navList} ${styles.siteActionList}`}>
               {/* <!-- search --> */}
-              <li className="nav-item">
-                <SearchIcon className="nav-icon cursor-point" />
+              <li className={styles.navItem}>
+                <SearchIcon className={`${styles.navIcon} ${styles.cursorPoint}`} />
               </li>
               {/* <!-- cart --> */}
-              <li className="nav-item">
-                <CartIcon className="nav-icon cursor-point" />
+              <li className={styles.navItem}>
+                <CartIcon className={`${styles.navIcon} ${styles.cursorPoint}`} />
               </li>
-              <li id="theme-toggle" className="nav-item">
+              <li id="theme-toggle" className={styles.navItem}>
                 {/* <!-- moon --> */}
-                {/* <MoonIcon className="nav-icon cursor-point" /> */}
+                {/* <MoonIcon className={`${styles.navIcon} ${styles.cursorPoint}`} /> */}
                 {/* <!-- sun --> */}
-                <SunIcon className="nav-icon cursor-point" />
+                <SunIcon className={`${styles.navIcon} ${styles.cursorPoint}`} />
               </li>
             </ul>
           </nav>
 
           {/* <!-- logo --> */}
-          <a className="header-logo-container" href="/">
+          <a className={styles.headerLogoContainer} href="/">
             <ACLogo className="icon-logo cursor-point" />
           </a>
         </div>
