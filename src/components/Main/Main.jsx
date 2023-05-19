@@ -7,9 +7,12 @@ import Cart from "./Cart/Cart";
 
 //export
 export default function Main({ stepPage, onPage }) {
+
+
   return (
     <main class="site-main">
       <div class="main-container">
+        
         {/* <!-- register --> */}
         <Register page={stepPage} />
         {/* <!-- cart --> */}

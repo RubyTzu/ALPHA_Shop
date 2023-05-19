@@ -1,8 +1,10 @@
 //import
 import styles from "../Register/Register.module.scss"
+import Phase from "./ProgressControlComponents/Phase";
 import NextButton from "./ProgressControlComponents/NextButton"
 import PrevButton from "./ProgressControlComponents/PrevButton"
-import Phase from "./ProgressControlComponents/Phase"
+import SubmitButton from "./ProgressControlComponents/SubmitButton"
+
 
 //export
 export default function ProgressControl({  onChangePage }) {
@@ -24,8 +26,10 @@ export default function ProgressControl({  onChangePage }) {
       {/* TODO:要控制 data-phase="credit-card" 來顯示*/}
       <Phase phase={"credit-card"}>
         <PrevButton onClick={onChangePage} />
-        <button className={styles.next}>確認下單</button>
+        <SubmitButton />
       </Phase>
     </section>
   );
 }
+
+

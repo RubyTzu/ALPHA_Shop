@@ -1,20 +1,36 @@
 //import
 import styles from "../../../Register.module.scss";
-import { cardInfoTwo } from "./cardInfoDatas";
+import { useContext } from "react";
+import { CardInfoContext } from "components/Contexts/CardInfoContext";
+import { HandleCardInfoChangeContext } from "components/Contexts/HandleCardInfoChangeContext";
 
 //export
 export default function DatePassInputs() {
-  let Infos = cardInfoTwo;
+  const Infos = useContext(CardInfoContext);
+  const onChange = useContext(HandleCardInfoChangeContext);
 
   return (
     <div class={`${styles.col} col col-12`}>
       {Infos.map((info) => {
-        return (
-          <div class={`${styles.inputGroup} input-w-lg-3 input-w-sm-s3`}>
-            <div class={styles.inputLabel}>{info.type}</div>
-            <input type="text" placeholder={info.placeHolder} />
-          </div>
-        );
+        if (info.id > 1) {
+          return (
+            <div
+              key={info.id}
+              class={`${styles.inputGroup} input-w-lg-3 input-w-sm-s3`}
+            >
+              <div class={styles.inputLabel}>{info.type}</div>
+              <input
+                type="text"
+                placeholder={info.placeHolder}
+                value={info.value}
+                onChange={(e) => {
+                  onChange(e.target.value, info.id);
+                }}
+              />
+            </div>
+          );
+        }
+        return null;
       })}
     </div>
   );

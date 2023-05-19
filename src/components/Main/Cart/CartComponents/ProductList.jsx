@@ -1,6 +1,8 @@
 //import
 import CartItem from "./CartItem";
-import styles from "../Cart.module.scss"
+import styles from "../Cart.module.scss";
+// import { useContext } from "react";
+// import { CartContext } from "../../../Context/CartContext";
 
 //export
 export default function ProductList({
@@ -8,8 +10,12 @@ export default function ProductList({
   onPlusClick,
   onMinusClick,
 }) {
+
   return (
-    <section className={`${styles.productList} col col-12`} data-total-price="0">
+    <section
+      className={`${styles.productList} col col-12`}
+      data-total-price="0"
+    >
       {productsData.map((product) => (
         <CartItem
           {...product}

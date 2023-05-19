@@ -1,5 +1,5 @@
 //import
-import styles from "../Cart.module.scss"
+import styles from "../Cart.module.scss";
 
 //export
 export default function TotalPrice({ productsData }) {
@@ -9,11 +9,11 @@ export default function TotalPrice({ productsData }) {
     (product) => (totalPrice += product.price * product.quantity)
   );
 
-   let totalPriceCurrency = Intl.NumberFormat("en-US", {
-     style: "currency", 
-     currency: "USD",
-     maximumSignificantDigits: 3
-   }).format(totalPrice);
+  let totalPriceCurrency = Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumSignificantDigits: 3,
+  }).format(totalPrice);
 
   return (
     <section className={`${styles.cartInfo} total col col-12`}>

@@ -3,7 +3,6 @@ import { ReactComponent as MinusIcon } from "icons/minus.svg";
 import { ReactComponent as PlusIcon } from "icons/plus.svg";
 import styles from "../Cart.module.scss";
 
-
 export default function CartItem({
   id,
   name,
