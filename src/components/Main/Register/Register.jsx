@@ -7,6 +7,10 @@ import Step3 from "./RegisterComponents/Step3/Step3";
 //import styles
 import styles from "./Register.module.scss"
 
+//import Context
+import { useContext } from "react";
+import { SetStepPageContext } from "components/Contexts/MainContext";
+
 //TODO: 改變 section 的 data-phase= 1或2或3  就可以改變要出現的頁面，可以預設initial-state是1
   //data-phase= "1" === address phase
   //data-phase= "2" === shipping phase
@@ -14,8 +18,8 @@ import styles from "./Register.module.scss"
 
 
 //export
-export default function Register({ page }) {
-
+export default function Register() {
+const page = useContext(SetStepPageContext);
 
   return (
     <section

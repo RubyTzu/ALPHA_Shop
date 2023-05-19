@@ -7,25 +7,25 @@ import SubmitButton from "./ProgressControlComponents/SubmitButton"
 
 
 //export
-export default function ProgressControl({  onChangePage }) {
+export default function ProgressControl() {
   return (
     <section
       className={`${styles.progressControlContainer} col col-lg-6 col-sm-12`}
     >
       {/* TODO:目前只有 data-phase="address" 會顯示*/}
       <Phase phase={"address"}>
-        <NextButton onClick={onChangePage} />
+        <NextButton />
       </Phase>
 
       {/* TODO:要控制 data-phase="shipping" 來顯示*/}
       <Phase phase={"shipping"}>
-        <PrevButton onClick={onChangePage} />
-        <NextButton onClick={onChangePage} />
+        <PrevButton />
+        <NextButton />
       </Phase>
 
       {/* TODO:要控制 data-phase="credit-card" 來顯示*/}
       <Phase phase={"credit-card"}>
-        <PrevButton onClick={onChangePage} />
+        <PrevButton />
         <SubmitButton />
       </Phase>
     </section>

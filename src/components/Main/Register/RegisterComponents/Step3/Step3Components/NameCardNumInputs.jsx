@@ -4,7 +4,7 @@ import { useContext } from "react";
 import {
   CardInfoContext,
   HandleCardInfoChangeContext,
-} from "components/Contexts/AllContext";
+} from "components/Contexts/MainContext";
 
 //export
 export default function NameCardNumInputs() {

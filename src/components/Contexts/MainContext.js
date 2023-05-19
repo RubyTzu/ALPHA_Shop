@@ -1,5 +1,11 @@
 import { createContext } from "react";
 
+//initialStepPage
+export const SetStepPageContext = createContext({
+  page: 1,
+  setPage: () => {},
+})
+
 //CardInfoContext
 export const CardInfoContext = createContext([
   { id: 0, type: "持卡人姓名", placeHolder: "John Doe", value: "" },
@@ -50,9 +56,12 @@ export const SetCardContext = createContext({
   setCardItem: () => {},
 });
 
+//HandleChangePageContext
+export const HandleChangePageContext = createContext();
+
 //HandleSubmitContext
 export const HandleSubmitContext = createContext();
 
 
 //在要用到context的地方import以下所需要的context
-//import { CardInfoContext, HandleCardInfoChangeContext, CartContext, SetCardContext, HandleSubmitContext } from "components/Contexts/AllContext";
+//import { StepPageContext, CardInfoContext, HandleCardInfoChangeContext, CartContext, SetCardContext, HandleChangePageContext, HandleSubmitContext } from "components/Contexts/AllContext";

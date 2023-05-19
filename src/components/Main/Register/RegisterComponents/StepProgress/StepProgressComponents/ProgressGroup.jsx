@@ -1,6 +1,7 @@
 import {phases} from "./PhasesData"
 import styles from "../../../Register.module.scss"
 import { ReactComponent as PgCompleteIcon } from "icons/pg-complete.svg";
+import { Fragment } from "react";
 
 export default function ProgressGroup() {
   let phaseInfos = phases;
@@ -8,8 +9,8 @@ export default function ProgressGroup() {
     <>
       {phaseInfos.map((info) => {
         return (
-          <>
-            <span key={info.dataPhase} className={styles.progressGroup} data-phase={info.dataPhase}>
+          <Fragment key={info.dataPhase}>
+            <span className={styles.progressGroup} data-phase={info.dataPhase}>
               <span className={styles.progressIcon}>
                 <span className={styles.text}>{info.number}</span>
                 <PgCompleteIcon
@@ -26,7 +27,7 @@ export default function ProgressGroup() {
             ) : (
               ""
             )}
-          </>
+          </Fragment>
         );
       })}
     </>

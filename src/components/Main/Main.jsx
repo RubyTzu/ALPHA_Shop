@@ -6,19 +6,19 @@ import Cart from "./Cart/Cart";
 //stepPage={stepPage} onPage={handleChangePage}
 
 //export
-export default function Main({ stepPage, onPage }) {
+export default function Main() {
 
 
   return (
-    <main class="site-main">
-      <div class="main-container">
+    <main className="site-main">
+      <div className="main-container">
         
         {/* <!-- register --> */}
-        <Register page={stepPage} />
+        <Register />
         {/* <!-- cart --> */}
         <Cart />
         {/* <!-- progress-control --> */}
-        <ProgressControl onChangePage={onPage} />
+        <ProgressControl />
       </div>
     </main>
   );

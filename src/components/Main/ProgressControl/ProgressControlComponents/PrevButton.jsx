@@ -1,9 +1,13 @@
 //import
 import styles from "../../Register/Register.module.scss";
 import { ReactComponent as LeftArrowIcon } from "icons/left-arrow.svg";
+import { useContext } from "react";
+import { HandleChangePageContext } from "components/Contexts/MainContext";
 
 //export
-export default function PrevButton({ onClick }) {
+export default function PrevButton() {
+    const onClick = useContext(HandleChangePageContext);
+  
   return (
     <button
       value="prev"
