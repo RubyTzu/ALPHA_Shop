@@ -18,8 +18,10 @@ export default function Header() {
             className={styles.navbarToggle}
             type="checkbox"
           />
-          <label for="navbar-toggle" className={styles.burgerContainer}>
-            <ToggleIcon className={`${styles.iconToggle} ${styles.cursorPoint}`} />
+          <label htmlFor="navbar-toggle" className={styles.burgerContainer}>
+            <ToggleIcon
+              className={`${styles.iconToggle} ${styles.cursorPoint}`}
+            />
           </label>
 
           {/* <!-- navbar-menu --> */}
@@ -54,17 +56,23 @@ export default function Header() {
             <ul className={`${styles.navList} ${styles.siteActionList}`}>
               {/* <!-- search --> */}
               <li className={styles.navItem}>
-                <SearchIcon className={`${styles.navIcon} ${styles.cursorPoint}`} />
+                <SearchIcon
+                  className={`${styles.navIcon} ${styles.cursorPoint}`}
+                />
               </li>
               {/* <!-- cart --> */}
               <li className={styles.navItem}>
-                <CartIcon className={`${styles.navIcon} ${styles.cursorPoint}`} />
+                <CartIcon
+                  className={`${styles.navIcon} ${styles.cursorPoint}`}
+                />
               </li>
               <li id="theme-toggle" className={styles.navItem}>
                 {/* <!-- moon --> */}
                 {/* <MoonIcon className={`${styles.navIcon} ${styles.cursorPoint}`} /> */}
                 {/* <!-- sun --> */}
-                <SunIcon className={`${styles.navIcon} ${styles.cursorPoint}`} />
+                <SunIcon
+                  className={`${styles.navIcon} ${styles.cursorPoint}`}
+                />
               </li>
             </ul>
           </nav>

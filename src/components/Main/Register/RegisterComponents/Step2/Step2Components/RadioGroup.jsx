@@ -11,23 +11,24 @@ export default function RadioGroup() {
       {types.map((type) => {
         return (
           <label
-            class={`${styles.radioGroup} col col-12`}
+            key={type.id}
+            className={`${styles.radioGroup} col col-12`}
             data-price={type.price}
           >
             <input
               id={type.id}
               type="radio"
               name="shipping"
-              checked={type.selected ? "checked" : ""}
+              defaultChecked={type.selected ? true : false}
             />
-            <div class={styles.radioInfo}>
-              <div class="col col-12">
-                <div class={styles.text}>{type.type}</div>
-                <div class={styles.price}></div>
+            <div className={styles.radioInfo}>
+              <div className="col col-12">
+                <div className={styles.text}>{type.type}</div>
+                <div className={styles.price}></div>
               </div>
-              <div class={`${styles.period} col col-12`}>{type.time}</div>
+              <div className={`${styles.period} col col-12`}>{type.time}</div>
             </div>
-            <div class={styles.radioBoxBorder}></div>
+            <div className={styles.radioBoxBorder}></div>
           </label>
         );
       })}

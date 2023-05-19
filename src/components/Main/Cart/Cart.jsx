@@ -6,7 +6,9 @@ import TotalPrice from "./CartComponents/TotalPrice";
 import styles from "./Cart.module.scss";
 // import useContext
 import { useContext } from "react";
-import { SetCardContext } from "components/Contexts/CartContext";
+import { SetCardContext } from "components/Contexts/AllContext";
+
+
 
 //export
 export default function Cart() {

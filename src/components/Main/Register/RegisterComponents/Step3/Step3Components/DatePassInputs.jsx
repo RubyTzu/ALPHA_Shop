@@ -1,8 +1,11 @@
 //import
 import styles from "../../../Register.module.scss";
 import { useContext } from "react";
-import { CardInfoContext } from "components/Contexts/CardInfoContext";
-import { HandleCardInfoChangeContext } from "components/Contexts/HandleCardInfoChangeContext";
+import {
+  CardInfoContext,
+  HandleCardInfoChangeContext,
+} from "components/Contexts/AllContext";
+
 
 //export
 export default function DatePassInputs() {
@@ -10,15 +13,15 @@ export default function DatePassInputs() {
   const onChange = useContext(HandleCardInfoChangeContext);
 
   return (
-    <div class={`${styles.col} col col-12`}>
+    <div className={`${styles.col} col col-12`}>
       {Infos.map((info) => {
         if (info.id > 1) {
           return (
             <div
               key={info.id}
-              class={`${styles.inputGroup} input-w-lg-3 input-w-sm-s3`}
+              className={`${styles.inputGroup} input-w-lg-3 input-w-sm-s3`}
             >
-              <div class={styles.inputLabel}>{info.type}</div>
+              <div className={styles.inputLabel}>{info.type}</div>
               <input
                 type="text"
                 placeholder={info.placeHolder}

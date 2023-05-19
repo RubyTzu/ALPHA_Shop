@@ -7,10 +7,13 @@ import "./style/main.scss";
 import { useState } from "react";
 //import Context
 import { useContext } from "react";
-import { CartContext, SetCardContext } from "components/Contexts/CartContext";
-import { CardInfoContext } from "components/Contexts/CardInfoContext";
-import { HandleCardInfoChangeContext } from "components/Contexts/HandleCardInfoChangeContext";
-import { HandleSubmitContext } from "components/Contexts/HandleSubmitContext";
+import {
+  CardInfoContext,
+  HandleCardInfoChangeContext,
+  CartContext,
+  SetCardContext,
+  HandleSubmitContext,
+} from "components/Contexts/AllContext";
 
 let initialStepPage = 1;
 

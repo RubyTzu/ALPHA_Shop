@@ -9,7 +9,7 @@ export default function ProgressGroup() {
       {phaseInfos.map((info) => {
         return (
           <>
-            <span className={styles.progressGroup} data-phase={info.dataPhase}>
+            <span key={info.dataPhase} className={styles.progressGroup} data-phase={info.dataPhase}>
               <span className={styles.progressIcon}>
                 <span className={styles.text}>{info.number}</span>
                 <PgCompleteIcon

@@ -1,8 +1,10 @@
 //import
 import styles from "../../../Register.module.scss";
 import { useContext } from "react";
-import { CardInfoContext } from "components/Contexts/CardInfoContext";
-import { HandleCardInfoChangeContext } from "components/Contexts/HandleCardInfoChangeContext";
+import {
+  CardInfoContext,
+  HandleCardInfoChangeContext,
+} from "components/Contexts/AllContext";
 
 //export
 export default function NameCardNumInputs() {
@@ -14,9 +16,11 @@ export default function NameCardNumInputs() {
       {Infos.map((info) => {
         if (info.id < 2) {
           return (
-            <div key={info.id} class={`${styles.col} col col-12`}>
-              <div class={`${styles.inputGroup} input-w-lg-4 input-w-sm-full`}>
-                <div class={styles.inputLabel}>{info.type}</div>
+            <div key={info.id} className={`${styles.col} col col-12`}>
+              <div
+                className={`${styles.inputGroup} input-w-lg-4 input-w-sm-full`}
+              >
+                <div className={styles.inputLabel}>{info.type}</div>
                 <input
                   type="text"
                   placeholder={info.placeHolder}
