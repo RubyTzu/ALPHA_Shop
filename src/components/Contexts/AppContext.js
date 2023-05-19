@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { useContext, useState } from "react";
 
 import {
   SetStepPageContext,
@@ -11,10 +11,7 @@ import {
 } from "components/Contexts/MainContext";
 
 
-export const AppContext = createContext();
-
-
-export const AppContextProviderContext = ({ children }) => {
+export const AppContextProvider = ({ children }) => {
   const [stepPage, setStepPage] = useState(1);
   const [cartItem, setCardItem] = useState(useContext(CartContext));
   const [cardValue, setCardValue] = useState(useContext(CardInfoContext));
@@ -71,7 +68,7 @@ export const AppContextProviderContext = ({ children }) => {
     }
   }
   return (
-    <AppContext.Provider value={null}>
+
       <HandleSubmitContext.Provider value={handleSubmitPage}>
         <SetCardContext.Provider value={{ cartItem, setCardItem }}>
           <CardInfoContext.Provider value={cardValue}>
@@ -85,6 +82,6 @@ export const AppContextProviderContext = ({ children }) => {
           </CardInfoContext.Provider>
         </SetCardContext.Provider>
       </HandleSubmitContext.Provider>
-    </AppContext.Provider>
+
   );
 };
