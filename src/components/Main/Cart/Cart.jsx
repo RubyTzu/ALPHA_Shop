@@ -6,11 +6,11 @@ import TotalPrice from "./CartComponents/TotalPrice";
 import styles from "./Cart.module.scss";
 // import useContext
 import { useContext } from "react";
-import { SetCardContext } from "components/Contexts/MainContext";
+import { AppContext } from "components/Contexts/AppContext";
 
 //export
 export default function Cart() {
-  const { cartItem, setCardItem } = useContext(SetCardContext);
+  const { cartItem, setCardItem } = useContext(AppContext);
 
   function handlePlusClick(productId) {
     setCardItem(

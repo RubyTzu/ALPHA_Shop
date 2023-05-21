@@ -1,19 +1,15 @@
 //import
 import styles from "../../../Register.module.scss";
 import { useContext } from "react";
-import {
-  CardInfoContext,
-  HandleCardInfoChangeContext,
-} from "components/Contexts/MainContext";
+import { AppContext } from "components/Contexts/AppContext";
 
 //export
 export default function NameCardNumInputs() {
-  const Infos = useContext(CardInfoContext);
-  const onChange = useContext(HandleCardInfoChangeContext);
+  const { cardValue, onChange } = useContext(AppContext);
 
   return (
     <>
-      {Infos.map((info) => {
+      {cardValue.map((info) => {
         if (info.id < 2) {
           return (
             <div key={info.id} className={`${styles.col} col col-12`}>

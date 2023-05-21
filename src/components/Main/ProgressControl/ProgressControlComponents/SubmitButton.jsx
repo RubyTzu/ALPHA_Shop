@@ -1,9 +1,10 @@
 import styles from "../../Register/Register.module.scss";
 import { useContext } from "react";
-import { HandleSubmitContext } from "components/Contexts/MainContext";
+import { AppContext } from "components/Contexts/AppContext";
 
 export default function SubmitButton() {
-  const onSubmitPage = useContext(HandleSubmitContext);
+  const { onSubmitPage } = useContext(AppContext);
+  
   return (
     <button
       value="Submit"

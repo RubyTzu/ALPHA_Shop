@@ -1,13 +1,18 @@
 //import
+import { useContext } from "react";
 import styles from "../Cart.module.scss";
+import { AppContext } from "components/Contexts/AppContext";
 
 //export
 export default function TotalPrice({ productsData }) {
+  const {shippingValue} =useContext(AppContext)
   let totalPrice = 0;
 
   productsData.forEach(
     (product) => (totalPrice += product.price * product.quantity)
   );
+
+  totalPrice += Number(shippingValue[1].value);
 
   let totalPriceCurrency = Intl.NumberFormat("en-US", {
     style: "currency",

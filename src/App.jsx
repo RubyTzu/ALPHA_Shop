@@ -4,7 +4,7 @@ import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
 import "./style/main.scss";
-//import Context
+//import Context Provider component
 import { AppContextProvider } from "components/Contexts/AppContext";
 
 

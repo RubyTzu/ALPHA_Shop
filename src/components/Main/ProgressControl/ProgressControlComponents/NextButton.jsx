@@ -2,11 +2,11 @@
 import styles from "../../Register/Register.module.scss"
 import { ReactComponent as RightArrowIcon } from "icons/right-arrow.svg";
 import { useContext } from "react";
-import { HandleChangePageContext } from "components/Contexts/MainContext";
+import { AppContext } from "components/Contexts/AppContext";
 
 //export
 export default function NextButton() {
-  const onClick = useContext(HandleChangePageContext);
+    const { onClick } = useContext(AppContext);
   
   return (
     <button
