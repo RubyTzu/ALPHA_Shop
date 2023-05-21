@@ -93,19 +93,6 @@ export const AppContextProvider = ({ children }) => {
     return totalPriceCurrency;
   }
 
-  function handleCardInfoChange(infoValue, infoId) {
-    let nextValue = cardValue.map((info) => {
-      if (info.id === infoId) {
-        return {
-          ...info,
-          value: infoValue,
-        };
-      }
-      return info;
-    });
-
-    setCardValue(nextValue);
-  }
 
   //AppContext.Provider value
   const providerValue = {
@@ -118,10 +105,10 @@ export const AppContextProvider = ({ children }) => {
     shippingValue,
     setShippingValue,
     cardValue,
+    setCardValue,
     //event handler
     onClick: handleChangePage,
-    onSubmitPage: handleSubmitPage,
-    onChange: handleCardInfoChange,
+    onSubmitPage: handleSubmitPage
   };
 
   return (

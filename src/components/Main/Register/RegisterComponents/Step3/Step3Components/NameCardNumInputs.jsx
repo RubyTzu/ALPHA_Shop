@@ -5,7 +5,22 @@ import { AppContext } from "components/Contexts/AppContext";
 
 //export
 export default function NameCardNumInputs() {
-  const { cardValue, onChange } = useContext(AppContext);
+  const { cardValue, setCardValue } = useContext(AppContext);
+  
+  function handleCardInfoChange(infoValue, infoId) {
+    let nextValue = cardValue.map((info) => {
+      if (info.id === infoId) {
+        return {
+          ...info,
+          value: infoValue,
+        };
+      }
+      return info;
+    });
+
+    setCardValue(nextValue);
+  }
+
 
   return (
     <>
@@ -22,7 +37,7 @@ export default function NameCardNumInputs() {
                   placeholder={info.placeHolder}
                   value={info.value}
                   onChange={(e) => {
-                    onChange(e.target.value, info.id);
+                    handleCardInfoChange(e.target.value, info.id);
                   }}
                 />
               </div>
