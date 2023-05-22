@@ -9,13 +9,13 @@ export default function RadioGroup() {
   const types = shippingTypes;
   const { shippingValue, setShippingValue } = useContext(AppContext);
 
-  function handleShippingType(value, price, time) {
+  function handleShippingType(type, price, time) {
     setShippingValue(
       shippingValue.map((info) => {
         if (info.type === "運送方式") {
           return {
             ...info,
-            value: value,
+            value: type,
           };
         }
         if (info.type === "運費") {
@@ -49,8 +49,8 @@ export default function RadioGroup() {
               type="radio"
               name="shipping"
               defaultChecked={type.id === "shipping-standard" && "checked"}
-              onChange={(e) =>
-                handleShippingType(e.target.value, type.price, type.time)
+              onChange={() =>
+                handleShippingType(type.type, type.price, type.time)
               }
             />
             <div className={styles.radioInfo}>
